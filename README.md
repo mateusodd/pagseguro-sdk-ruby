@@ -239,7 +239,7 @@ Em seguida, acesse o link para confirmar as autorizações
 Você pode estornar pagamentos que as transações estiverem com status: Paga (3), Disponível (4), Em disputa (5).
 
 ```ruby
-  refund = PagSeguro::Refund.new
+  refund = PagSeguro::TransactionRefund.new
   refund.transaction_code = "D5D5BE444148407891E497B421975599"
 
   response = refund.register
@@ -394,9 +394,6 @@ Ou se preferir você pode usar o
 
 Caso tenha dúvidas ou precise de suporte, acesse nosso [fórum].
 
-## Changelog
-
-https://github.com/pagseguro/ruby/blob/master/CHANGELOG.md
 
 ## Licença
 
@@ -431,7 +428,7 @@ Se seu Pull Request for relacionado a uma versão específica, o Pull Request n�
   [Criar Requisições de Pagamentos]: https://devs.pagseguro.uol.com.br/docs/checkout-web
   [Consultar Transações por Código]: https://devs.pagseguro.uol.com.br/docs/pagamento-recorrente-consulta-pelo-codigo-de-adesao
   [Consultar Transações por Intervalo de Datas]: https://devs.pagseguro.uol.com.br/docs/pagamento-recorrente-consulta-por-intervalo-de-datas
-  [Receber Notificações]: https://devs.pagseguro.uol.com.br/docs/checkout-web-notificacoes
+  [Receber Notificações]: https://dev.pagseguro.uol.com.br/docs/api-notificacao-v1
   [Estornar Transações por Código]: https://devs.pagseguro.uol.com.br/docs/checkout-web-cancelamento-e-estorno
   [Cancelar Transações por Código]: https://devs.pagseguro.uol.com.br/docs/pagamento-recorrente-cancelamento-de-adesao
   [fórum]: http://forum.pagseguro.uol.com.br/
