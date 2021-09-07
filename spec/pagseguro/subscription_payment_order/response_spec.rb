@@ -27,7 +27,9 @@ describe PagSeguro::SubscriptionPaymentOrder::Response do
     end
 
     it 'object must have errors' do
-      expect{ subject.serialize }.to change{ object.errors }
+      subject.serialize
+        
+      expect(object.errors.count).to eq 1
     end
   end
 
