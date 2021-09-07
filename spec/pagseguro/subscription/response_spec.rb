@@ -72,7 +72,9 @@ describe PagSeguro::Subscription::Response do
       let(:raw_xml) { File.read('./spec/fixtures/subscription/fail.xml') }
 
       it 'errors should be present' do
-        expect { subject.serialize }.to change { subscription.errors }
+        subject.serialize
+        
+        expect(subscription.errors).to include("Credit card token is invalid.")
       end
     end
   end
